@@ -1,20 +1,18 @@
-#-------------------------------------------------
-#
-# Project created by QtCreator 2017-06-17T15:42:30
-#
-#-------------------------------------------------
+QT += core
+QT -= gui
 
-QT       += core gui
-
-greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
+CONFIG += c++11
 
 TARGET = threeValued
+CONFIG += console
+CONFIG -= app_bundle
+
 TEMPLATE = app
 
+SOURCES += main.cpp \
+    Sources/main.cpp \
+    main.cpp
 
-SOURCES += main.cpp\
-        main.cpp
-
-HEADERS  += main.h
-
-FORMS    += main.ui
+HEADERS += \
+    Headers/lukasiewiczlogic.hpp \
+    lukasiewiczlogic.hpp
