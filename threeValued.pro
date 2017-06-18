@@ -9,10 +9,8 @@ CONFIG -= app_bundle
 
 TEMPLATE = app
 
-SOURCES += main.cpp \
-    Sources/main.cpp \
-    main.cpp
+SOURCES += main.cpp
 
 HEADERS += \
     Headers/lukasiewiczlogic.hpp \
-    lukasiewiczlogic.hpp
+   lukasiewiczlogic.hpp
