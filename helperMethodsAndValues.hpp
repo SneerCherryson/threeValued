@@ -1,43 +1,19 @@
-#ifndef LUKASIEWICZLOGIC_H
-#define LUKASIEWICZLOGIC_H
+#ifndef HELPERMETHODSANDVALUES_HPP
+#define HELPERMETHODSANDVALUES_HPP
 #include <map>
 using namespace std;
 
 /***********************************************
  *             Enum with logic values
+ *  In Lukasiewicz logic L3, thirdValue should be
+ *  interpreted as possibility
 ***********************************************/
 
 enum logicValues{
     l_false,
     l_true,
-    l_possibility
+    l_thirdValue
 };
-
-/***********************************************
- *      Logic operators for L3
-***********************************************/
-
-/***********************************************
- *      Logic operator: negation
-***********************************************/
-
-inline logicValues operator!(const logicValues &a)
-{
-    if(l_false == a)
-    {
-        return l_true;
-    }
-    else if(l_true == a)
-    {
-        return l_false;
-    }
-    else
-    {
-        return l_possibility;
-    }
-
-}
-
 
 /***********************************************
  *              Methods
@@ -46,7 +22,7 @@ inline logicValues operator!(const logicValues &a)
 const map <logicValues, string> valuesNameMap = {
     {l_false, "false"},
     {l_true, "true"},
-    {l_possibility, "possibility"}
+    {l_thirdValue, "possibility"}
 };
 
 string toString(const logicValues &val)
@@ -59,18 +35,15 @@ logicValues convertIntToEnum (int toBeConvert)
     switch (toBeConvert) {
     case 0:
         return l_false;
-        break;
     case 1:
         return l_true;
-        break;
     case 2:
-        return l_possibility;
+        return l_thirdValue;
     default:
         cout << "Wrong value. 1/2 that is possiblity will be set." << endl;
-        break;
     }
-    return l_possibility;
+    return l_thirdValue;
 }
 
 
-#endif // LUKASIEWICZLOGIC_H
+#endif // HELPERMETHODSANDVALUES_HPP
