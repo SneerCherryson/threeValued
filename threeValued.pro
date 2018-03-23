@@ -13,5 +13,5 @@ SOURCES += main.cpp
 
 HEADERS += \
     Headers/lukasiewiczlogic.hpp \
-    helperMethodsAndValues.hpp \
-    lukasiewiczLogic.hpp
+    lukasiewiczLogic.hpp \
+    commonMethods.hpp

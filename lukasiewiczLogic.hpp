@@ -1,6 +1,25 @@
 #ifndef LUKASIEWICZLOGIC_HPP
 #define LUKASIEWICZLOGIC_HPP
-#include "helperMethodsAndValues.hpp"
+#include <map>
+using namespace std;
+
+/***********************************************
+ *             Enum with logic values
+ *  In Lukasiewicz logic L3, thirdValue should be
+ *  interpreted as possibility
+***********************************************/
+
+enum logicValues{
+    l_false,
+    l_true,
+    l_thirdValue
+};
+
+const map <logicValues, string> valuesNameMap = {
+    {l_false, "false"},
+    {l_true, "true"},
+    {l_thirdValue, "possibility"}
+};
 
 /***********************************************
  *      Logic operators for L3
